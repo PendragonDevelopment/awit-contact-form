@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+ruby '2.1.4'
+gem 'rack'
+gem 'rack-recaptcha'
+gem 'sinatra'
+gem 'pony'
+gem 'json'
