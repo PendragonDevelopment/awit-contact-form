@@ -11,7 +11,7 @@ post '/send_email' do
   if recaptcha_valid?
     res = Pony.mail(
       :from => params[:name] + "<" + params[:email] + ">",
-      :to => 'comm@athenswomenintech.com',
+      :to => 'pendragondevelopment@gmail.com',
       :subject => "Contact from website: " + params[:subject],
       :body => params[:message],
       :via => :smtp,
