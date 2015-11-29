@@ -10,7 +10,7 @@ set :public_dir, Proc.new { File.join(root, "_site") }
 post '/send_email' do
   res = Pony.mail(
     :from => params[:name] + "<" + params[:email] + ">",
-    :to => 'comm@athenswomenintech.com',
+    :to => 'info@justsmallpotatoes.com',
     :subject => "Contact from website",
     :body => params[:message],
     :via => :smtp,
