@@ -4,21 +4,13 @@ require 'rubygems'
 require 'json'
 require 'pony'
 require 'erb'
-require 'sinatra/json'
-require 'sinatra/cross_origin'
 
 class SmallPotato < Sinatra::Base
-  configure do
-    enable :cross_origin
+  before do
+    content_type :json
+    headers 'Access-Control-Allow-Origin' => '*',
+            'Access-Control-Allow-Methods' => ['POST']
   end
-
-  ##### CONFIG #####
-  set :allow_origin, "*"
-  set :allow_methods, [:get, :post, :options]
-  set :allow_credentials, true
-  set :max_age, "1728000"
-  set :expose_headers, ['Content-Type']
-  set :root, File.dirname(__FILE__)
 
   Dir["./models/*.rb"].each { |file| require file }
 
