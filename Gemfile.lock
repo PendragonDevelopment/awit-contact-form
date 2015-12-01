@@ -1,10 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    domain_name (0.5.25)
+      unf (>= 0.0.5, < 1.0.0)
+    ffi (1.9.10-x86-mingw32)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     json (1.8.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
+    netrc (0.11.0)
     pony (1.11)
       mail (>= 2.0)
     rack (1.6.0)
@@ -12,13 +18,30 @@ GEM
       rack
     rack-recaptcha (0.6.6)
       json
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
+    rest-client (1.8.0-x86-mingw32)
+      ffi (~> 1.9)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    stripe (1.31.0)
+      json (~> 1.8.1)
+      rest-client (~> 1.4)
     tilt (1.4.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
+    unf_ext (0.0.7.1-x86-mingw32)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
@@ -27,3 +50,4 @@ DEPENDENCIES
   rack
   rack-recaptcha
   sinatra
+  stripe

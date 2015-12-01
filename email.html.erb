@@ -1,0 +1,18 @@
+<h1>You've received a new order!</h1>
+
+<h2><%= params[:name] %> wants to send some potatoes!</h2>
+
+<p>Sender info:</p>
+<ul>
+  <li>Name: <%= params[:name] %></li>
+  <li>Email: <%= params[:email] %></li>
+  <li>Remain anonymous?: <%= params[:anon] %></li>
+</ul>
+<p>Recipient info:</p>
+<ul>
+  <li>Name: <%= params[:recipient][:name] %></li>
+  <li>Address: <%= params[:recipient][:street] %>, <%= params[:recipient][:city] %>, <%= params[:recipient][:state] %> <%= params[:recipient][:zip] %></li>
+  <li>Phone: <%= params[:recipient][:phone] %></li>
+  <li>Message: <%= params[:recipient][:message] %></li>
+  <li>Type: <%= params[:recipient][:potatoVariety] %></li>
+</ul>
