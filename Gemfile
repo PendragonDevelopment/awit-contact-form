@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.2.3'
 gem 'rack'
-gem 'rack-recaptcha'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'pony'
