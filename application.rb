@@ -6,6 +6,9 @@ require 'pony'
 require 'erb'
 
 class SmallPotato < Sinatra::Base
+  set :protection, false
+  set :public_dir, Proc.new { File.join(root, "_site") }
+
   before do
     content_type :json
     headers 'Access-Control-Allow-Origin' => '*',
@@ -13,9 +16,6 @@ class SmallPotato < Sinatra::Base
   end
 
   Dir["./models/*.rb"].each { |file| require file }
-
-  set :protection, false
-  set :public_dir, Proc.new { File.join(root, "_site") }
 
   post '/send_email' do
     res = Pony.mail(
