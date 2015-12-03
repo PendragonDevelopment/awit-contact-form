@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.3'
 gem 'rack'
+gem 'thin'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'pony'
