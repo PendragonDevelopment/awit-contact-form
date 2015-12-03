@@ -7,4 +7,3 @@ gem 'sinatra-contrib'
 gem 'pony'
 gem 'json'
 gem 'stripe'
-gem "sinatra-cross_origin", "~> 0.3.1"
