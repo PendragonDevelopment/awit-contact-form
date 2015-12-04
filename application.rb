@@ -42,6 +42,8 @@ class SmallPotato < Sinatra::Base
   post '/send_order' do
     headers 'Access-Control-Allow-Origin' => '*',
             'Access-Control-Allow-Methods' => ['POST']
+    puts headers
+    puts request
     charge = Charge.new(ENV['STRIPE_KEY'])
     charge.newOrder(params[:token], params[:amount])
     template_path = "./email.html.erb"
